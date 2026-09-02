@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fernandes Construtora | Engenharia de Vanguarda em Ponta Porã - MS</title>
+  <meta name="description" content="A Fernandes Construtora é referência em engenharia de alta precisão, empreendimentos de luxo e Minha Casa Minha Vida com acabamento premium em Ponta Porã - MS.">
+  <meta name="keywords" content="Construtora Ponta Porã, Imóveis Ponta Porã, Minha Casa Minha Vida Ponta Porã, Fernandes Construtora, Casas em Condomínio MS, Apartamentos Ponta Porã">
+  
+  <!-- OpenGraph & Social Cards -->
+  <meta property="og:title" content="Fernandes Construtora | Ponta Porã - MS">
+  <meta property="og:description" content="Construindo o futuro da fronteira com rigor técnico, arquitetura sustentável e facilidades Minha Casa Minha Vida.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts: Outfit, Urbanist, Plus Jakarta Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <!-- Three.js (3D Engine) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Grain Texture Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Preloader Cinematográfico -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo text-shimmer">FERNANDES</div>
+      <div class="preloader-sub">CONSTRUTORA & INCORPORADORA</div>
+      <div class="preloader-progress-bar">
+        <div class="preloader-progress-fill"></div>
+      </div>
+      <div class="preloader-counter">0%</div>
+      <div class="preloader-geo">PONTA PORÃ • MATO GROSSO DO SUL • 22°32'S 55°43'W</div>
+    </div>
+  </div>
+
+  <!-- Header Fixo de Navegação -->
+  <header class="header-main">
+    <div class="header-container">
+      <a href="#" class="brand-logo-wrapper" data-cursor-view>
+        <div class="brand-icon">
+          <span>F</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">FERNANDES</span>
+          <span class="brand-tag">Construtora • Ponta Porã</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#credibilidade" class="nav-link">Solidez & Métricas</a>
+        <a href="#empreendimentos" class="nav-link">Empreendimentos</a>
+        <a href="#mcmv" class="nav-link">
+          Minha Casa Minha Vida <span class="nav-badge-mcmv">Simulador</span>
+        </a>
+        <a href="#localizacao" class="nav-link">Ponta Porã</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contato" class="btn-header-cta">
+          <span>Agendar Visita</span>
+          <i data-lucide="arrow-up-right" style="width:16px; height:16px;"></i>
+        </a>
+        <div class="mobile-menu-toggle" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION COM 3D THREE.JS -->
+  <section id="hero" class="hero-section">
+    <!-- 3D WebGL Canvas Container -->
+    <div id="hero-canvas-container"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content-wrapper">
+      <div class="hero-text-block">
+        <h1 class="hero-main-title">
+          CONSTRUINDO O FUTURO DA <span class="title-gradient">FRONTEIRA.</span>
+        </h1>
+
+        <p class="hero-description">
+          Arquitetura de vanguarda, engenharia de precisão e solidez inabalável. Dos residenciais de alto padrão aos lares do <strong>Minha Casa, Minha Vida</strong>, transformamos o solo sul-mato-grossense em patrimônio para a sua vida.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#empreendimentos" class="btn-primary-lux" data-cursor-view>
+            <span>Conhecer Obras</span>
+            <i data-lucide="building-2" style="width: 18px; height: 18px;"></i>
+          </a>
+          <a href="#mcmv" class="btn-secondary-glass">
+            <span>Simular Minha Casa Minha Vida</span>
+            <i data-lucide="calculator" style="width: 18px; height: 18px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Painel de Controle 3D Interativo -->
+      <div class="hero-interactive-controls">
+        <div class="control-panel-3d">
+          <div class="control-header">
+            <span class="control-title">Visualizador 3D</span>
+            <span class="animate-live-dot" style="width:6px; height:6px; background:#00c896; border-radius:50%;"></span>
+          </div>
+
+          <div class="mode-selector-tabs">
+            <button class="mode-tab-btn" data-mode="blueprint">Blueprint</button>
+            <button class="mode-tab-btn" data-mode="day">Dia</button>
+            <button class="mode-tab-btn active" data-mode="night">Noite</button>
+          </div>
+
+          <div class="control-hint">
+            <i data-lucide="move-3d" style="width:14px; height:14px; color:#d4af37;"></i>
+            <span>Arraste com o mouse para girar o 3D</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra Inferior do Hero com Métricas Rápidas -->
+    <div class="hero-footer-bar">
+      <div class="hero-footer-content">
+        <div class="hero-metric-item">
+          <span class="hero-metric-value">+120k</span>
+          <span class="hero-metric-label">m² Construídos</span>
+        </div>
+        <div class="hero-metric-item">
+          <span class="hero-metric-value">100%</span>
+          <span class="hero-metric-label">Entregas no Prazo</span>
+        </div>
+        <div class="hero-metric-item">
+          <span class="hero-metric-value">PBQP-H</span>
+          <span class="hero-metric-label">Certificação Nível A</span>
+        </div>
+        <div class="scroll-indicator animate-scroll-bob">
+          <span>Role para explorar</span>
+          <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: CREDIBILIDADE, RAÍZES EM PONTA PORÃ E MÉTRICAS -->
+  <section id="credibilidade" class="section-pad">
+    <div class="container-main">
+      <div class="section-header">
+        <h2 class="section-title">A FORÇA DE QUEM EDIFICA <br>COM RIGOR E TRANSPARÊNCIA.</h2>
+        <p class="section-subtitle">
+          Nascida e consolidada em Ponta Porã, a Fernandes Construtora alia a mais avançada tecnologia estrutural ao compromisso ético de entregar cada metro quadrado com perfeição.
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-narrative">
+          <p class="trust-lead-text">
+            "Não erguemos apenas paredes; construímos a infraestrutura que impulsiona o desenvolvimento da fronteira e o legado de gerações."
+          </p>
+          <p class="trust-body-text">
+            Em uma região estratégica e em constante crescimento econômico como Ponta Porã e Pedro Juan Caballero, a qualidade construtiva é um divisor de águas. Cada projeto da Fernandes Construtora passa por testes laboratoriais de concreto, ensaios de solo e rigoroso controle ambiental, garantindo valorização patrimonial perpétua.
+          </p>
+          
+          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:12px;">
+            <div class="glass-pill" style="padding: 10px 18px; border-radius: var(--radius-pill); font-size:0.85rem; display:flex; align-items:center; gap:8px;">
+              <i data-lucide="award" style="width:16px; height:16px; color:#d4af37;"></i>
+              <span>Certificação PBQP-H Nível A</span>
+            </div>
+            <div class="glass-pill" style="padding: 10px 18px; border-radius: var(--radius-pill); font-size:0.85rem; display:flex; align-items:center; gap:8px;">
+              <i data-lucide="shield-check" style="width:16px; height:16px; color:#00c896;"></i>
+              <span>ISO 9001 de Gestão da Qualidade</span>
+            </div>
+            <div class="glass-pill" style="padding: 10px 18px; border-radius: var(--radius-pill); font-size:0.85rem; display:flex; align-items:center; gap:8px;">
+              <i data-lucide="badge-percent" style="width:16px; height:16px; color:#38bdf8;"></i>
+              <span>Correspondente Oficial Caixa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3 class="pillar-title">Concreto Usinado & Laje Maciça</h3>
+            <p class="pillar-desc">Estruturas dimensionadas com coeficientes de segurança superiores, eliminando trincas e garantindo silêncio acústico.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="sun-medium"></i>
+            </div>
+            <h3 class="pillar-title">Eficiência Térmica & Solar</h3>
+            <p class="pillar-desc">Orientação solar inteligente planejada para o clima do Centro-Oeste, com economia comprovada de energia.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="clock-check"></i>
+            </div>
+            <h3 class="pillar-title">Pontualidade Contratual</h3>
+            <p class="pillar-desc">Cronograma físico-financeiro com acompanhamento fotográfico semanal através do Portal do Cliente.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="shield-alert"></i>
+            </div>
+            <h3 class="pillar-title">5 Anos de Garantia Total</h3>
+            <p class="pillar-desc">Assistência técnica pós-obra ágil com equipe de engenharia residente em Ponta Porã.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faixa de Contadores Numéricos Animados -->
+      <div class="metrics-strip">
+        <div class="metric-box">
+          <div class="metric-number-wrapper">
+            <span class="metric-num" data-target="120000">0</span>
+            <span class="metric-suffix">m²</span>
+          </div>
+          <div class="metric-title">Área Construída</div>
+          <div class="metric-sub">Em Ponta Porã e região</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number-wrapper">
+            <span class="metric-num" data-target="100">0</span>
+            <span class="metric-suffix">%</span>
+          </div>
+          <div class="metric-title">Pontualidade Absoluta</div>
+          <div class="metric-sub">Zero dias de atraso histórico</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number-wrapper">
+            <span class="metric-num" data-target="1850">0</span>
+            <span class="metric-suffix">+</span>
+          </div>
+          <div class="metric-title">Famílias Realizadas</div>
+          <div class="metric-sub">Chaves entregues com festa</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number-wrapper">
+            <span class="metric-num" data-target="5">0</span>
+            <span class="metric-suffix">Anos</span>
+          </div>
+          <div class="metric-title">Garantia Estrutural</div>
+          <div class="metric-sub">Segurança respaldada em contrato</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: PORTFÓLIO DE EMPREENDIMENTOS -->
+  <section id="empreendimentos" class="section-pad" style="background-color: var(--bg-secondary);">
+    <div class="container-wide">
+      <div class="section-header center">
+        <h2 class="section-title">PROJETOS QUE DEFINEM O HORIZONTE.</h2>
+        <p class="section-subtitle">
+          De condomínios fechados luxuosos a residenciais subsidiados com padrão superior, explore as criações da Fernandes Construtora.
+        </p>
+      </div>
+
+      <!-- Filtros Dinâmicos de Categoria -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Todos os Projetos</button>
+        <button class="filter-btn" data-filter="luxo">Alto Padrão</button>
+        <button class="filter-btn" data-filter="mcmv">Minha Casa Minha Vida</button>
+        <button class="filter-btn" data-filter="condominio">Condomínios Fechados</button>
+      </div>
+
+      <!-- Grid de Projetos -->
+      <div class="projects-grid">
+        <!-- Card 1: Fronteira Nobre -->
+        <article class="project-card" data-category="luxo">
+          <div class="project-image-wrap">
+            <svg class="project-img" viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="sky1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#080c14" /><stop offset="50%" stop-color="#131d2e" /><stop offset="100%" stop-color="#1c2a42" />
+                </linearGradient>
+                <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f5e29f" /><stop offset="50%" stop-color="#d4af37" /><stop offset="100%" stop-color="#aa821c" />
+                </linearGradient>
+                <linearGradient id="glassGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(74, 158, 255, 0.55)" /><stop offset="100%" stop-color="rgba(10, 30, 60, 0.85)" />
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="800" fill="url(#sky1)" />
+              <g fill="#ffffff" opacity="0.6">
+                <circle cx="120" cy="90" r="2" /><circle cx="240" cy="140" r="2" /><circle cx="450" cy="70" r="1.5" />
+                <circle cx="850" cy="110" r="2" /><circle cx="1020" cy="80" r="2" /><circle cx="1110" cy="160" r="2" />
+              </g>
+              <rect x="0" y="580" width="1200" height="220" fill="#05080e" />
+              <rect x="180" y="600" width="840" height="120" rx="10" fill="#0d2238" stroke="#1e4976" stroke-width="2" />
+              <rect x="200" y="610" width="800" height="100" rx="6" fill="#071828" />
+              <g transform="translate(200, 140)">
+                <rect x="100" y="100" width="600" height="380" rx="8" fill="#111722" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+                <rect x="80" y="60" width="440" height="160" rx="6" fill="#182232" stroke="rgba(212,175,55,0.5)" stroke-width="2" />
+                <rect x="40" y="40" width="520" height="24" rx="4" fill="url(#goldGrad1)" />
+                <rect x="300" y="220" width="460" height="20" rx="4" fill="url(#goldGrad1)" />
+                <rect x="120" y="240" width="340" height="220" rx="4" fill="url(#glassGrad1)" stroke="#38bdf8" stroke-width="2" />
+                <line x1="230" y1="240" x2="230" y2="460" stroke="#1e293b" stroke-width="3" />
+                <line x1="340" y1="240" x2="340" y2="460" stroke="#1e293b" stroke-width="3" />
+                <circle cx="230" cy="330" r="50" fill="#ffe29a" opacity="0.35" />
+                <circle cx="380" cy="330" r="60" fill="#ffe29a" opacity="0.35" />
+                <rect x="120" y="80" width="280" height="120" rx="4" fill="url(#glassGrad1)" stroke="#38bdf8" stroke-width="1.5" />
+                <g stroke="#d4af37" stroke-width="3" opacity="0.9">
+                  <line x1="420" y1="70" x2="420" y2="210" /><line x1="440" y1="70" x2="440" y2="210" />
+                  <line x1="460" y1="70" x2="460" y2="210" /><line x1="480" y1="70" x2="480" y2="210" />
+                </g>
+                <rect x="-20" y="470" width="840" height="16" fill="#00f0ff" opacity="0.75" />
+              </g>
+              <rect x="60" y="640" width="1080" height="100" rx="12" fill="rgba(10, 14, 22, 0.94)" stroke="rgba(212,175,55,0.5)" stroke-width="1.5" />
+              <text x="100" y="685" font-family="'Syne', sans-serif, Arial" font-size="30" font-weight="800" fill="#ffffff" letter-spacing="1.5">RESIDENCIAL FRONTEIRA NOBRE</text>
+              <text x="100" y="718" font-family="sans-serif, Arial" font-size="16" font-weight="700" fill="#d4af37" letter-spacing="3">CASAS INTELIGENTES • ALTO PADRÃO • PONTA PORÃ</text>
+            </svg>
+            <div class="project-badges-top">
+              <span class="project-status-badge badge-launch">Lançamento</span>
+              <span class="project-status-badge" style="background:rgba(0,0,0,0.7); color:#fff; border:1px solid rgba(255,255,255,0.2);">Alto Padrão</span>
+            </div>
+            <div class="project-overlay-gradient"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Residencial Contemporâneo</span>
+              <span class="project-location"><i data-lucide="map-pin" style="width:14px; height:14px;"></i> Bairro Nobre</span>
+            </div>
+            <h3 class="project-title">Residencial Fronteira Nobre</h3>
+            <p class="project-desc">Casas inteligentes com arquitetura paramétrica, pé direito duplo de 4,5m, piscina privativa com borda infinita e automação integral.</p>
+            
+            <div class="project-specs-list">
+              <div class="spec-item"><span class="spec-label">Área</span><span class="spec-val">185m² a 340m²</span></div>
+              <div class="spec-item"><span class="spec-label">Suítes</span><span class="spec-val">3 a 4 Suítes</span></div>
+              <div class="spec-item"><span class="spec-label">Vagas</span><span class="spec-val">3 a 4 Garagens</span></div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-price-hint">
+                <span class="price-sub">Financiamento Exclusivo</span>
+                <span class="price-main">Plantas Personalizáveis</span>
+              </div>
+              <button class="btn-explore-project" data-project-btn="fronteira-nobre">
+                <span>Ver Planta & Detalhes</span>
+                <i data-lucide="arrow-right" style="width:16px; height:16px;"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Parque das Acácias (MCMV Premium) -->
+        <article class="project-card" data-category="mcmv">
+          <div class="project-image-wrap">
+            <svg class="project-img" viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="sky2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#051512" /><stop offset="50%" stop-color="#0b2b24" /><stop offset="100%" stop-color="#124439" />
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="800" fill="url(#sky2)" />
+              <rect x="0" y="560" width="1200" height="240" fill="#061a15" />
+              <path d="M 0 580 Q 300 550, 600 580 T 1200 570 L 1200 800 L 0 800 Z" fill="#08261e" />
+              <g transform="translate(180, 160)">
+                <polygon points="60,180 180,90 300,180" fill="#1b3a32" stroke="#00c896" stroke-width="3" />
+                <rect x="70" y="180" width="220" height="240" fill="#10241f" stroke="rgba(255,255,255,0.2)" stroke-width="2" rx="4" />
+                <rect x="100" y="220" width="70" height="90" rx="4" fill="#99f6e4" opacity="0.9" />
+                <rect x="200" y="220" width="70" height="90" rx="4" fill="#ffe29a" opacity="0.95" />
+                <rect x="145" y="330" width="60" height="90" rx="2" fill="#00c896" />
+                
+                <polygon points="480,180 600,90 720,180" fill="#1b3a32" stroke="#00c896" stroke-width="3" />
+                <rect x="490" y="180" width="220" height="240" fill="#10241f" stroke="rgba(255,255,255,0.2)" stroke-width="2" rx="4" />
+                <rect x="520" y="220" width="70" height="90" rx="4" fill="#ffe29a" opacity="0.95" />
+                <rect x="620" y="220" width="70" height="90" rx="4" fill="#99f6e4" opacity="0.9" />
+                <rect x="565" y="330" width="60" height="90" rx="2" fill="#00c896" />
+
+                <circle cx="390" cy="270" r="70" fill="#059669" opacity="0.95" />
+                <circle cx="370" cy="250" r="50" fill="#10b981" opacity="0.95" />
+                <rect x="380" y="320" width="20" height="100" fill="#78350f" rx="3" />
+                <ellipse cx="390" cy="440" rx="160" ry="35" fill="#06b6d4" stroke="#67e8f9" stroke-width="4" />
+              </g>
+              <rect x="60" y="640" width="1080" height="100" rx="12" fill="rgba(6, 22, 18, 0.94)" stroke="rgba(0,200,150,0.5)" stroke-width="1.5" />
+              <text x="100" y="685" font-family="'Syne', sans-serif, Arial" font-size="30" font-weight="800" fill="#ffffff" letter-spacing="1.5">PARQUE DAS ACÁCIAS</text>
+              <text x="100" y="718" font-family="sans-serif, Arial" font-size="16" font-weight="700" fill="#00c896" letter-spacing="3">MINHA CASA MINHA VIDA PREMIUM • SUBSÍDIO CAIXA</text>
+            </svg>
+            <div class="project-badges-top">
+              <span class="project-status-badge badge-mcmv">Minha Casa Minha Vida</span>
+              <span class="project-status-badge badge-launch">Entrada 60x</span>
+            </div>
+            <div class="project-overlay-gradient"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category" style="color:var(--emerald-accent);">Habitação de Qualidade</span>
+              <span class="project-location"><i data-lucide="map-pin" style="width:14px; height:14px;"></i> Ponta Porã</span>
+            </div>
+            <h3 class="project-title">Parque das Acácias</h3>
+            <p class="project-desc">A revolução do Minha Casa Minha Vida: laje maciça, piso em porcelanato, condomínio fechado com piscina, playground e quiosques com churrasqueira.</p>
+            
+            <div class="project-specs-list">
+              <div class="spec-item"><span class="spec-label">Área</span><span class="spec-val">64m² a 82m²</span></div>
+              <div class="spec-item"><span class="spec-label">Quartos</span><span class="spec-val">2 a 3 Quartos</span></div>
+              <div class="spec-item"><span class="spec-label">Subsídio</span><span class="spec-val">Até R$ 55.000</span></div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-price-hint">
+                <span class="price-sub">Parcelas a partir de</span>
+                <span class="price-main" style="color:var(--emerald-accent);">R$ 490/mês</span>
+              </div>
+              <button class="btn-explore-project" data-project-btn="parque-das-acacias">
+                <span>Ver Planta & Detalhes</span>
+                <i data-lucide="arrow-right" style="width:16px; height:16px;"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Grand Horizon -->
+        <article class="project-card" data-category="luxo">
+          <div class="project-image-wrap">
+            <svg class="project-img" viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="sky3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0a0e1a" /><stop offset="50%" stop-color="#161f36" /><stop offset="100%" stop-color="#223052" />
+                </linearGradient>
+                <linearGradient id="towerGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="rgba(56, 189, 248, 0.6)" /><stop offset="50%" stop-color="rgba(14, 165, 233, 0.3)" /><stop offset="100%" stop-color="rgba(2, 132, 199, 0.7)" />
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="800" fill="url(#sky3)" />
+              <rect x="0" y="600" width="1200" height="200" fill="#060810" />
+              <g transform="translate(380, 60)">
+                <rect x="60" y="40" width="320" height="520" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5" />
+                <rect x="80" y="60" width="280" height="460" fill="url(#towerGlass)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
+                <g stroke="rgba(56,189,248,0.5)" stroke-width="2">
+                  <line x1="80" y1="100" x2="360" y2="100" /><line x1="80" y1="140" x2="360" y2="140" />
+                  <line x1="80" y1="180" x2="360" y2="180" /><line x1="80" y1="220" x2="360" y2="220" />
+                  <line x1="80" y1="260" x2="360" y2="260" /><line x1="80" y1="300" x2="360" y2="300" />
+                  <line x1="80" y1="340" x2="360" y2="340" /><line x1="80" y1="380" x2="360" y2="380" />
+                  <line x1="80" y1="420" x2="360" y2="420" /><line x1="80" y1="460" x2="360" y2="460" />
+                </g>
+                <rect x="30" y="160" width="90" height="14" fill="#d4af37" />
+                <rect x="320" y="240" width="90" height="14" fill="#d4af37" />
+                <rect x="30" y="320" width="90" height="14" fill="#d4af37" />
+                <rect x="320" y="400" width="90" height="14" fill="#d4af37" />
+                <rect x="40" y="20" width="360" height="26" rx="4" fill="#d4af37" />
+                <line x1="220" y1="0" x2="220" y2="20" stroke="#38bdf8" stroke-width="5" />
+              </g>
+              <rect x="60" y="640" width="1080" height="100" rx="12" fill="rgba(10, 14, 24, 0.94)" stroke="rgba(56,189,248,0.5)" stroke-width="1.5" />
+              <text x="100" y="685" font-family="'Syne', sans-serif, Arial" font-size="30" font-weight="800" fill="#ffffff" letter-spacing="1.5">EDIFÍCIO GRAND HORIZON</text>
+              <text x="100" y="718" font-family="sans-serif, Arial" font-size="16" font-weight="700" fill="#38bdf8" letter-spacing="3">TORRE RESIDENCIAL PANORÂMICA • CENTRO DE PONTA PORÃ</text>
+            </svg>
+            <div class="project-badges-top">
+              <span class="project-status-badge badge-ready">Pronto para Morar</span>
+              <span class="project-status-badge" style="background:rgba(0,0,0,0.7); color:#fff; border:1px solid rgba(255,255,255,0.2);">Vista Panorâmica</span>
+            </div>
+            <div class="project-overlay-gradient"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Torre Residencial</span>
+              <span class="project-location"><i data-lucide="map-pin" style="width:14px; height:14px;"></i> Centro - Ponta Porã</span>
+            </div>
+            <h3 class="project-title">Edifício Grand Horizon</h3>
+            <p class="project-desc">O mais alto padrão vertical da fronteira. Apartamentos com varanda gourmet integrada, isolamento acústico e rooftop lounge com piscina aquecida.</p>
+            
+            <div class="project-specs-list">
+              <div class="spec-item"><span class="spec-label">Área</span><span class="spec-val">112m² a 220m²</span></div>
+              <div class="spec-item"><span class="spec-label">Suítes</span><span class="spec-val">3 Suítes</span></div>
+              <div class="spec-item"><span class="spec-label">Garagem</span><span class="spec-val">2 a 3 Vagas</span></div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-price-hint">
+                <span class="price-sub">Últimas 3 Unidades</span>
+                <span class="price-main">Pronto para Morar</span>
+              </div>
+              <button class="btn-explore-project" data-project-btn="grand-horizon">
+                <span>Ver Planta & Detalhes</span>
+                <i data-lucide="arrow-right" style="width:16px; height:16px;"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Reserva Ponta Porã -->
+        <article class="project-card" data-category="condominio">
+          <div class="project-image-wrap">
+            <svg class="project-img" viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="sky4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#08120d" /><stop offset="50%" stop-color="#10261b" /><stop offset="100%" stop-color="#1a3d2c" />
+                </linearGradient>
+                <linearGradient id="goldReserva" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f5e29f" /><stop offset="50%" stop-color="#d4af37" /><stop offset="100%" stop-color="#aa821c" />
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="800" fill="url(#sky4)" />
+              <ellipse cx="600" cy="520" rx="450" ry="100" fill="#051c14" stroke="#10b981" stroke-width="2" />
+              <ellipse cx="600" cy="520" rx="320" ry="60" fill="#0284c7" opacity="0.85" />
+              <g transform="translate(250, 160)">
+                <polygon points="350,140 150,220 550,220" fill="#1e293b" stroke="#d4af37" stroke-width="3" />
+                <rect x="180" y="220" width="340" height="160" rx="6" fill="#0f172a" stroke="rgba(255,255,255,0.25)" stroke-width="2" />
+                <rect x="220" y="260" width="80" height="120" fill="#fef08a" opacity="0.95" rx="4" />
+                <rect x="400" y="260" width="80" height="120" fill="#fef08a" opacity="0.95" rx="4" />
+                <line x1="270" y1="220" x2="270" y2="380" stroke="#d4af37" stroke-width="3" />
+                <line x1="430" y1="220" x2="430" y2="380" stroke="#d4af37" stroke-width="3" />
+                <circle cx="80" cy="280" r="65" fill="#047857" opacity="0.95" />
+                <circle cx="120" cy="260" r="55" fill="#10b981" opacity="0.95" />
+                <circle cx="620" cy="280" r="65" fill="#047857" opacity="0.95" />
+                <circle cx="580" cy="260" r="55" fill="#10b981" opacity="0.95" />
+              </g>
+              <rect x="60" y="640" width="1080" height="100" rx="12" fill="rgba(8, 20, 14, 0.94)" stroke="rgba(212,175,55,0.5)" stroke-width="1.5" />
+              <text x="100" y="685" font-family="'Syne', sans-serif, Arial" font-size="30" font-weight="800" fill="#ffffff" letter-spacing="1.5">CONDOMÍNIO RESERVA PONTA PORÃ</text>
+              <text x="100" y="718" font-family="sans-serif, Arial" font-size="16" font-weight="700" fill="#d4af37" letter-spacing="3">LOTES &amp; CASAS EM CONDOMÍNIO FECHADO</text>
+            </svg>
+            <div class="project-badges-top">
+              <span class="project-status-badge badge-launch">Condomínio Fechado</span>
+              <span class="project-status-badge" style="background:rgba(0,0,0,0.7); color:#fff; border:1px solid rgba(255,255,255,0.2);">Natureza Preservada</span>
+            </div>
+            <div class="project-overlay-gradient"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Condomínio Horizontal</span>
+              <span class="project-location"><i data-lucide="map-pin" style="width:14px; height:14px;"></i> Anel Viário</span>
+            </div>
+            <h3 class="project-title">Reserva Ponta Porã</h3>
+            <p class="project-desc">Lotes e casas em condomínio fechado com segurança armada 24h, clube esportivo completo com quadras de tênis de saibro, beach tennis e mata nativa.</p>
+            
+            <div class="project-specs-list">
+              <div class="spec-item"><span class="spec-label">Lotes de</span><span class="spec-val">360m² a 600m²</span></div>
+              <div class="spec-item"><span class="spec-label">Lazer</span><span class="spec-val">Clubhouse VIP</span></div>
+              <div class="spec-item"><span class="spec-label">Segurança</span><span class="spec-val">Blindada 24h</span></div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-price-hint">
+                <span class="price-sub">Condições Especiais</span>
+                <span class="price-main">Entrada + 72x</span>
+              </div>
+              <button class="btn-explore-project" data-project-btn="reserva-ponta-pora">
+                <span>Ver Planta & Detalhes</span>
+                <i data-lucide="arrow-right" style="width:16px; height:16px;"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4: MINHA CASA, MINHA VIDA & SIMULADOR INTERATIVO -->
+  <section id="mcmv" class="section-pad mcmv-master-section">
+    <div class="container-main">
+      <div class="section-header center">
+        <h2 class="section-title">O SEU SONHO DA CASA PRÓPRIA <br>COM QUALIDADE DE VERDADE.</h2>
+        <p class="section-subtitle">
+          Descubra como o programa Minha Casa, Minha Vida na Fernandes Construtora combina <strong>máximo subsídio federal</strong>, <strong>as menores taxas de juros do Brasil</strong> e <strong>acabamento superior</strong> em Ponta Porã.
+        </p>
+      </div>
+
+      <div class="mcmv-intro-grid">
+        <div>
+          <h3 style="font-family:var(--font-display); font-size:1.8rem; font-weight:800; color:#fff; margin-bottom:16px;">
+            Por que financiar com a Fernandes Construtora?
+          </h3>
+          <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:20px;">
+            Diga adeus ao aluguel pagando menos por mês do que você gasta atualmente. Nós cuidamos de <strong>100% da burocracia bancária junto à Caixa Econômica Federal</strong>, com análise de crédito rápida e sem custo.
+          </p>
+
+          <div class="mcmv-benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon-box">
+                <i data-lucide="gift"></i>
+              </div>
+              <div>
+                <div class="benefit-text-title">Subsídio Federal de até R$ 55.000,00</div>
+                <div class="benefit-text-desc">Desconto direto no valor do imóvel pago pelo Governo Federal (não precisa devolver).</div>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon-box">
+                <i data-lucide="wallet"></i>
+              </div>
+              <div>
+                <div class="benefit-text-title">Use o seu FGTS para Abater a Entrada</div>
+                <div class="benefit-text-desc">Utilize o saldo retido da sua conta FGTS e parcele o restante em até 60x direto conosco.</div>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon-box">
+                <i data-lucide="percent"></i>
+              </div>
+              <div>
+                <div class="benefit-text-title">Taxas a partir de 4,00% ao ano</div>
+                <div class="benefit-text-desc">As menores taxas do mercado imobiliário brasileiro, com parcelas decrescentes ou fixas.</div>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon-box">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div>
+                <div class="benefit-text-title">Acabamento em Porcelanato & Laje</div>
+                <div class="benefit-text-desc">Construção de alto padrão: não utilizamos forro PVC ou paredes de gesso frágeis.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIMULADOR INTERATIVO CAIXA / MCMV -->
+        <div class="simulator-glass-card">
+          <div class="sim-header">
+            <div>
+              <div class="sim-header-title">Simulador MCMV</div>
+              <span style="font-size:0.75rem; color:var(--text-muted);">Cálculo Oficial Caixa 2026</span>
+            </div>
+            <div class="sim-caixa-badge">
+              <i data-lucide="check-circle-2" style="width:14px; height:14px;"></i>
+              <span>Parceria Caixa</span>
+            </div>
+          </div>
+
+          <div class="sim-controls-wrapper">
+            <!-- Controle de Renda Familiar -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-name">Renda Bruta Familiar:</span>
+                <span id="mcmv-income-display" class="slider-current-val">R$ 2.800,00</span>
+              </div>
+              <input type="range" id="mcmv-income-slider" class="custom-range-slider" min="1500" max="8000" step="100" value="2800">
+              <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:var(--text-muted); font-family:var(--font-mono);">
+                <span>R$ 1.500</span>
+                <span>R$ 4.750</span>
+                <span>R$ 8.000+</span>
+              </div>
+            </div>
+
+            <!-- Toggles de Dependentes e FGTS -->
+            <div class="sim-options-grid">
+              <div id="opt-dependents" class="option-toggle-box checked">
+                <span class="option-title">Possui Dependentes?</span>
+                <i data-lucide="users" style="width:18px; height:18px; color:var(--emerald-accent);"></i>
+              </div>
+              <div id="opt-fgts" class="option-toggle-box checked">
+                <span class="option-title">+3 Anos de FGTS?</span>
+                <i data-lucide="briefcase" style="width:18px; height:18px; color:var(--emerald-accent);"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resultados Dinâmicos Calculados -->
+          <div class="sim-results-box">
+            <div class="sim-results-grid">
+              <div class="res-item">
+                <span class="res-label">Faixa MCMV</span>
+                <span id="res-faixa" class="res-number" style="font-size:1.3rem;">Faixa 1</span>
+                <span class="res-subinfo">Enquadramento</span>
+              </div>
+
+              <div class="res-item">
+                <span class="res-label">Subsídio Estimado</span>
+                <span id="res-subsidio" class="res-number">R$ 48.500</span>
+                <span class="res-subinfo">Desconto do Governo</span>
+              </div>
+
+              <div class="res-item">
+                <span class="res-label">Parcela Estimada</span>
+                <span id="res-parcela" class="res-number gold">R$ 580/mês</span>
+                <span class="res-subinfo">Aprox. Caixa</span>
+              </div>
+            </div>
+
+            <div class="rent-comparison-bar">
+              <span class="rent-text">
+                <i data-lucide="trending-up" style="width:16px; height:16px; color:var(--emerald-accent); vertical-align:middle; margin-right:4px;"></i>
+                Aluguel médio em Ponta Porã: <strong>R$ 1.350/mês</strong>
+              </span>
+              <span id="rent-saving-val" class="rent-saving">Economia de até R$ 9.240/ano vs Aluguel!</span>
+            </div>
+          </div>
+
+          <!-- CTA Direto para o WhatsApp da Construtora -->
+          <a id="btn-whatsapp-sim" href="#" class="btn-whatsapp-sim">
+            <i data-lucide="message-circle" style="width:20px; height:20px;"></i>
+            <span>Solicitar Pré-Aprovação Caixa no WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- TIMELINE PASSO A PASSO -->
+      <div class="timeline-horizontal-wrapper">
+        <div style="text-align:center; margin-bottom:40px;">
+          <h3 style="font-family:var(--font-display); font-size:1.8rem; font-weight:800; color:#fff;">DO PRIMEIRO CONTATO À CHAVE NA MÃO</h3>
+        </div>
+
+        <div class="timeline-steps-grid">
+          <div class="timeline-step-card">
+            <div class="step-card-header">
+              <span class="step-num-badge">01</span>
+              <div class="step-icon-bubble"><i data-lucide="file-check-2"></i></div>
+            </div>
+            <h4 class="step-title">Simulação & Crédito</h4>
+            <p class="step-desc">Análise gratuita e segura dos seus documentos pela nossa equipe de correspondentes Caixa em Ponta Porã.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <div class="step-card-header">
+              <span class="step-num-badge">02</span>
+              <div class="step-icon-bubble"><i data-lucide="home"></i></div>
+            </div>
+            <h4 class="step-title">Escolha do Imóvel</h4>
+            <p class="step-desc">Você escolhe a melhor posição solar, lote ou planta que mais combina com a sua família.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <div class="step-card-header">
+              <span class="step-num-badge">03</span>
+              <div class="step-icon-bubble"><i data-lucide="file-signature"></i></div>
+            </div>
+            <h4 class="step-title">Assinatura Caixa</h4>
+            <p class="step-desc">Formalização do contrato com garantia de entrega e seguro oficial da Caixa Econômica Federal.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <div class="step-card-header">
+              <span class="step-num-badge">04</span>
+              <div class="step-icon-bubble"><i data-lucide="hard-hat"></i></div>
+            </div>
+            <h4 class="step-title">Acompanhe a Obra</h4>
+            <p class="step-desc">Acesso exclusivo ao Portal do Cliente com relatórios fotográficos e evolução de cada etapa.</p>
+          </div>
+
+          <div class="timeline-step-card step-highlight">
+            <div class="step-card-header">
+              <span class="step-num-badge highlight">05</span>
+              <div class="step-icon-bubble highlight"><i data-lucide="key-round"></i></div>
+            </div>
+            <h4 class="step-title">Entrega das Chaves!</h4>
+            <p class="step-desc">Cerimônia solene com vistoria técnica minuciosa e você morando no que é verdadeiramente seu.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ACCORDION -->
+      <div style="margin-top:90px;">
+        <div style="text-align:center; margin-bottom:40px;">
+          <h3 style="font-family:var(--font-display); font-size:1.8rem; font-weight:800; color:#fff;">PERGUNTAS FREQUENTES SOBRE O FINANCIAMENTO</h3>
+        </div>
+
+        <div class="faq-accordion-container">
+          <div class="faq-item active">
+            <button class="faq-question-btn">
+              <span>Autônomos e profissionais liberais podem financiar em Ponta Porã?</span>
+              <div class="faq-icon-cross"><i data-lucide="plus"></i></div>
+            </button>
+            <div class="faq-answer-pane">
+              <p>Sim! Profissionais autônomos, MEIs e liberais podem comprovar renda através de extratos bancários dos últimos 6 meses, declaração de Imposto de Renda ou pró-labore. Nossa equipe é especialista em montar o dossiê para aprovação junto à Caixa.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Posso somar a minha renda com cônjuge, pais ou irmãos?</span>
+              <div class="faq-icon-cross"><i data-lucide="plus"></i></div>
+            </button>
+            <div class="faq-answer-pane">
+              <p>Com certeza! No programa Minha Casa, Minha Vida é permitida a composição de renda familiar com cônjuge (casados ou união estável), noivos, pais, filhos ou outros familiares que forem residir no imóvel. Isso aumenta a capacidade de financiamento e o valor do imóvel que você pode adquirir.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Como funciona o parcelamento da entrada com a Fernandes Construtora?</span>
+              <div class="faq-icon-cross"><i data-lucide="plus"></i></div>
+            </button>
+            <div class="faq-answer-pane">
+              <p>A Fernandes Construtora oferece condições exclusivas de facilitação da entrada, permitindo parcelar o valor que não for coberto pelo subsídio ou FGTS em até 60 vezes direto com a construtora, com parcelas mensais que cabem perfeitamente no seu bolso.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Quem já possui terreno ou outro imóvel pode participar do MCMV?</span>
+              <div class="faq-icon-cross"><i data-lucide="plus"></i></div>
+            </button>
+            <div class="faq-answer-pane">
+              <p>Para obter os subsídios federais e as taxas de juros reduzidas das Faixas 1 e 2 do MCMV, o comprador não pode possuir imóvel residencial urbano registrado em seu nome. Caso já possua, podemos estruturar o financiamento através das linhas SBPE ou Pró-Cotista com ótimas taxas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 5: LOCALIZAÇÃO PRIVILEGIADA EM PONTA PORÃ -->
+  <section id="localizacao" class="section-pad">
+    <div class="container-main">
+      <div class="section-header">
+        <h2 class="section-title">PONTA PORÃ: ONDE A SUA VIDA <br>VALORIZA A CADA DIA.</h2>
+        <p class="section-subtitle">
+          Região de desenvolvimento dinâmico, polo universitário de medicina e comércio internacional vibrante.
+        </p>
+      </div>
+
+      <div class="location-showcase-grid">
+        <div class="location-points-list">
+          <div class="location-poi-card">
+            <div class="poi-info">
+              <i data-lucide="trees" class="poi-icon"></i>
+              <span class="poi-name">Parque dos Ervais</span>
+            </div>
+            <span class="poi-dist">A 4 minutos</span>
+          </div>
+
+          <div class="location-poi-card">
+            <div class="poi-info">
+              <i data-lucide="shopping-bag" class="poi-icon"></i>
+              <span class="poi-name">Shopping China & Linha Internacional</span>
+            </div>
+            <span class="poi-dist">A 6 minutos</span>
+          </div>
+
+          <div class="location-poi-card">
+            <div class="poi-info">
+              <i data-lucide="graduation-cap" class="poi-icon"></i>
+              <span class="poi-name">Faculdades de Medicina (Polo Universitário)</span>
+            </div>
+            <span class="poi-dist">A 5 minutos</span>
+          </div>
+
+          <div class="location-poi-card">
+            <div class="poi-info">
+              <i data-lucide="utensils" class="poi-icon"></i>
+              <span class="poi-name">Centro Gastronômico e Comercial</span>
+            </div>
+            <span class="poi-dist">A 3 minutos</span>
+          </div>
+
+          <div class="location-poi-card">
+            <div class="poi-info">
+              <i data-lucide="plane" class="poi-icon"></i>
+              <span class="poi-name">Aeroporto Internacional de Ponta Porã</span>
+            </div>
+            <span class="poi-dist">A 8 minutos</span>
+          </div>
+        </div>
+
+        <!-- Visualizador Estilizado de Mapa / Radar com Link Google Maps -->
+        <div class="map-mockup-wrapper">
+          <div class="hero-grid-overlay" style="opacity: 0.5;"></div>
+          <div class="map-radar-circle"></div>
+          <div class="map-pin-central">
+            <div style="width:20px; height:20px; background:#d4af37; border-radius:50%; margin:0 auto 8px; border:3px solid #fff; box-shadow:0 0 20px #d4af37;"></div>
+            <div class="map-badge-label">SEDE: R. GEN. OSÓRIO, 1338</div>
+          </div>
+          <div style="position:absolute; bottom:20px; left:20px; right:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); background:rgba(0,0,0,0.85); padding:10px 16px; border-radius:8px; border:1px solid var(--border-subtle);">
+            <span>COORDS: -22.5358° S, -55.7275° W • CENTRO, PONTA PORÃ - MS (CEP 79904-596)</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=R.+Gen.+Os%C3%B3rio%2C+1338+-+Centro%2C+Ponta+Por%C3%A3+-+MS%2C+79904-596" target="_blank" rel="noopener noreferrer" style="color:#d4af37; font-weight:700; display:inline-flex; align-items:center; gap:4px; text-decoration:underline;">
+              <span>Ver no Google Maps</span>
+              <i data-lucide="external-link" style="width:12px; height:12px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 6: DEPOIMENTOS DE CLIENTES -->
+  <section id="depoimentos" class="section-pad" style="background-color: var(--bg-secondary);">
+    <div class="container-main">
+      <div class="section-header center">
+        <h2 class="section-title">HISTÓRIAS DE QUEM CONQUISTOU A CHAVE.</h2>
+        <p class="section-subtitle">
+          Mais de 1.850 famílias e investidores que escolheram a solidez da Fernandes Construtora em Ponta Porã.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="test-stars">
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+            </div>
+            <p class="test-quote">
+              "Consegui meu subsídio no Minha Casa Minha Vida e saí do aluguel em Ponta Porã com uma parcela menor do que pagava antes. A casa foi entregue 2 meses antes do prazo com piso em porcelanato impecável!"
+            </p>
+          </div>
+          <div class="test-author-row">
+            <div class="test-avatar-bubble" style="width:48px; height:48px; border-radius:50%; background:#132030; border:2px solid #00c896; display:flex; align-items:center; justify-content:center; font-family:'Syne', sans-serif; font-weight:800; font-size:1.1rem; color:#00c896;">FS</div>
+            <div>
+              <div class="test-name">Fernanda Silveira</div>
+              <div class="test-role">Proprietária no Parque das Acácias</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="test-stars">
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+            </div>
+            <p class="test-quote">
+              "Como médico aqui na fronteira, buscava segurança, acabamento de altíssimo nível e praticidade. O Residencial Fronteira Nobre superou todas as expectativas com a automação e o isolamento acústico."
+            </p>
+          </div>
+          <div class="test-author-row">
+            <div class="test-avatar-bubble" style="width:48px; height:48px; border-radius:50%; background:#1f1c10; border:2px solid #d4af37; display:flex; align-items:center; justify-content:center; font-family:'Syne', sans-serif; font-weight:800; font-size:1.1rem; color:#d4af37;">MA</div>
+            <div>
+              <div class="test-name">Dr. Marcos Arantes</div>
+              <div class="test-role">Médico & Investidor Imobiliário</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="test-stars">
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+              <i data-lucide="star" style="fill:#d4af37;"></i>
+            </div>
+            <p class="test-quote">
+              "A seriedade da Fernandes com os prazos e com a documentação na Caixa Econômica nos deu total tranquilidade. Recomendo de olhos fechados para quem quer comprar ou construir em Ponta Porã."
+            </p>
+          </div>
+          <div class="test-author-row">
+            <div class="test-avatar-bubble" style="width:48px; height:48px; border-radius:50%; background:#101a2c; border:2px solid #38bdf8; display:flex; align-items:center; justify-content:center; font-family:'Syne', sans-serif; font-weight:800; font-size:1.1rem; color:#38bdf8;">RF</div>
+            <div>
+              <div class="test-name">Rodrigo & Camila Ferreira</div>
+              <div class="test-role">Empresários em Ponta Porã</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 7: FORMULÁRIO DE AGENDAMENTO VIP & CONTATO -->
+  <section id="contato" class="section-pad">
+    <div class="container-main">
+      <div class="contact-vip-wrapper">
+        <div>
+          <h2 style="font-family:var(--font-display); font-size:2.4rem; font-weight:800; color:#fff; line-height:1.15; margin-bottom:20px;">
+            AGENDE UMA VISITA AO DECORADO OU FALE COM NOSSO ENGENHEIRO.
+          </h2>
+          <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:32px;">
+            Venha tomar um café em nosso escritório central em Ponta Porã ou receba uma consultoria personalizada de crédito e arquitetura.
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div style="display:flex; align-items:center; gap:16px;">
+              <div style="width:44px; height:44px; border-radius:50%; background:rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; color:#d4af37;">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div>
+                <div style="font-weight:700; color:#fff;">Endereço Central</div>
+                <div style="font-size:0.88rem; color:var(--text-muted);">R. Gen. Osório, 1338 - Centro, Ponta Porã - MS, 79904-596</div>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:16px;">
+              <div style="width:44px; height:44px; border-radius:50%; background:rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; color:#d4af37;">
+                <i data-lucide="phone"></i>
+              </div>
+              <div>
+                <div style="font-weight:700; color:#fff;">Plantão de Vendas & WhatsApp</div>
+                <div style="font-size:0.88rem; color:var(--text-muted);"><a href="https://wa.me/5567999615359" target="_blank" rel="noopener noreferrer" style="color:#d4af37; font-weight:700;">(67) 99961-5359</a></div>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:16px;">
+              <div style="width:44px; height:44px; border-radius:50%; background:rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; color:#d4af37;">
+                <i data-lucide="clock"></i>
+              </div>
+              <div>
+                <div style="font-weight:700; color:#fff;">Horário de Atendimento</div>
+                <div style="font-size:0.88rem; color:var(--text-muted);">Segunda a Sexta: 07:30 às 18:00 | Sábado: 08:00 às 12:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form id="vip-booking-form" class="contact-form-block">
+          <div class="form-input-group">
+            <label for="booking-name" class="form-label">Nome Completo</label>
+            <input type="text" id="booking-name" class="form-input" placeholder="Ex: Leonardo Centurion" required>
+          </div>
+
+          <div class="form-input-group">
+            <label for="booking-phone" class="form-label">WhatsApp com DDD</label>
+            <input type="tel" id="booking-phone" class="form-input" placeholder="(67) 99961-5359" required>
+          </div>
+
+          <div class="form-input-group">
+            <label for="booking-interest" class="form-label">Qual o seu interesse?</label>
+            <select id="booking-interest" class="form-select" required>
+              <option value="Minha Casa Minha Vida (Subsídio Caixa)">Minha Casa Minha Vida (Subsídio Caixa)</option>
+              <option value="Residencial Fronteira Nobre (Alto Padrão)">Residencial Fronteira Nobre (Alto Padrão)</option>
+              <option value="Edifício Grand Horizon (Apartamentos)">Edifício Grand Horizon (Apartamentos)</option>
+              <option value="Condomínio Reserva Ponta Porã (Lotes & Casas)">Condomínio Reserva Ponta Porã (Lotes & Casas)</option>
+              <option value="Construção Personalizada no Meu Terreno">Construção Personalizada no Meu Terreno</option>
+            </select>
+          </div>
+
+          <div class="form-input-group">
+            <label for="booking-date" class="form-label">Data Preferida para Visita / Contato</label>
+            <input type="date" id="booking-date" class="form-input" required>
+          </div>
+
+          <button type="submit" class="btn-primary-lux" style="width:100%; margin-top:10px;">
+            <span>Confirmar Agendamento VIP</span>
+            <i data-lucide="calendar-check" style="width:18px; height:18px;"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER MONUMENTAL -->
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo-wrapper">
+            <div class="brand-icon"><span>F</span></div>
+            <div class="brand-text">
+              <span class="brand-name">FERNANDES</span>
+              <span class="brand-tag">Construtora • Ponta Porã MS</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Transformando o cenário urbano de Ponta Porã com excelência arquitetônica, rigor construtivo e o compromisso de realizar o sonho do seu patrimônio.
+          </p>
+          <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">
+            CNPJ: 00.000.000/0001-00 • CREA-MS 00000/D
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Empreendimentos</div>
+          <div class="footer-links-list">
+            <a href="#empreendimentos" class="footer-link">Residencial Fronteira Nobre</a>
+            <a href="#empreendimentos" class="footer-link">Parque das Acácias (MCMV)</a>
+            <a href="#empreendimentos" class="footer-link">Edifício Grand Horizon</a>
+            <a href="#empreendimentos" class="footer-link">Reserva Ponta Porã</a>
+            <a href="#empreendimentos" class="footer-link">Obras Entregues</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Minha Casa Minha Vida</div>
+          <div class="footer-links-list">
+            <a href="#mcmv" class="footer-link">Simulador de Parcelas</a>
+            <a href="#mcmv" class="footer-link">Tabela de Subsídios 2026</a>
+            <a href="#mcmv" class="footer-link">Uso do FGTS na Entrada</a>
+            <a href="#mcmv" class="footer-link">Crédito para Autônomos</a>
+            <a href="#mcmv" class="footer-link">Documentação Caixa</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contato Direto</div>
+          <div class="footer-links-list">
+            <span class="footer-link">📍 R. Gen. Osório, 1338 - Centro, Ponta Porã - MS, 79904-596</span>
+            <a href="https://wa.me/5567999615359" target="_blank" rel="noopener noreferrer" class="footer-link" style="color:var(--gold-primary); font-weight:600;">📱 (67) 99961-5359 (WhatsApp)</a>
+            <span class="footer-link">✉️ contato@fernandesconstrutora.com.br</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-monumental-text">
+        FERNANDES
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Fernandes Construtora. Todos os direitos reservados. Ponta Porã - MS.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="#" style="color:var(--text-muted);">Política de Privacidade</a>
+          <a href="#" style="color:var(--text-muted);">Termos de Uso</a>
+          <a href="#hero" style="color:var(--gold-primary);">Voltar ao Topo ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DE DETALHES DO PROJETO & PLANTA HUMANIZADA -->
+  <div id="project-detail-modal" class="modal-backdrop">
+    <div class="modal-box-card">
+      <button class="modal-close-btn" aria-label="Fechar Modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <span id="modal-project-category" class="project-category" style="margin-bottom:8px; display:inline-block;">ALTO PADRÃO</span>
+      <h3 id="modal-project-title" class="project-title" style="font-size:2.2rem; margin-bottom:6px;">Título do Projeto</h3>
+      <div id="modal-project-location" style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">📍 Ponta Porã - MS</div>
+
+      <p id="modal-project-desc" style="color:var(--text-secondary); line-height:1.7; margin-bottom:24px;">Descrição detalhada do projeto.</p>
+
+      <div id="modal-project-specs" class="project-specs-list" style="margin-bottom:24px;">
+        <!-- Injetado via JavaScript -->
+      </div>
+
+      <div style="margin-bottom:28px;">
+        <h4 style="font-family:var(--font-heading); font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:12px;">Diferenciais Construtivos:</h4>
+        <ul id="modal-project-diffs" style="list-style:none;">
+          <!-- Injetado via JavaScript -->
+        </ul>
+      </div>
+
+      <a id="modal-project-cta" href="#" class="btn-primary-lux" style="width:100%;">
+        <span>Receber Planta em PDF & Tabela no WhatsApp</span>
+        <i data-lucide="file-text" style="width:18px; height:18px;"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-notice" class="toast-notice">Notificação</div>
+
+  <!-- Scripts do App -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/simulator.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Inicialização dos Ícones Lucide -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

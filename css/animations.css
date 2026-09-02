@@ -1,0 +1,246 @@
+/* ==========================================================================
+   FERNANDES CONSTRUTORA - ANIMATIONS & KEYFRAMES (AWWWARDS EDITION)
+   ========================================================================== */
+
+/* Preloader Animations */
+@keyframes preloaderCounter {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2), 0 0 30px rgba(212, 175, 55, 0.1);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4), 0 0 50px rgba(212, 175, 55, 0.2);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes liveDotPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(0, 200, 150, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 200, 150, 0);
+  }
+}
+
+@keyframes blueprintGridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes borderGlowRun {
+  0%, 100% {
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    border-color: rgba(212, 175, 55, 0.8);
+  }
+}
+
+@keyframes scrollIndicatorBob {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.3;
+  }
+}
+
+/* Utilitários de Animação */
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: subtleFloat 5s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 20s linear infinite;
+}
+
+.animate-live-dot {
+  animation: liveDotPulse 2s infinite;
+}
+
+.animate-scroll-bob {
+  animation: scrollIndicatorBob 2s ease-in-out infinite;
+}
+
+/* Shimmer Effect para Textos e Badges */
+.text-shimmer {
+  background: linear-gradient(90deg, #d4af37 0%, #fff6d9 50%, #d4af37 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmerSweep 4s linear infinite;
+}
+
+/* Efeito de Vidro Fosco e Iluminação */
+.glass-card {
+  background: rgba(18, 22, 31, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.08);
+  transform: translateY(-4px);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-pill:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+}
+
+/* Grain Overlay Cinematográfico */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Cursor Magnético Customizado */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, background-color 0.3s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  mix-blend-mode: exclusion;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease, height 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0b0d10;
+}
+
+body.cursor-hover .custom-cursor {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+}
+
+body.cursor-hover .custom-cursor-follower {
+  width: 64px;
+  height: 64px;
+  border-color: rgba(212, 175, 55, 0.9);
+  background-color: rgba(212, 175, 55, 0.15);
+}
+
+body.cursor-view-project .custom-cursor-follower {
+  width: 80px;
+  height: 80px;
+  background-color: #d4af37;
+  border-color: #d4af37;
+}
+
+body.cursor-drag .custom-cursor-follower {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: #ffffff;
+}
+
+/* Transições Suaves de Revelação */
+.reveal-text-line {
+  overflow: hidden;
+  display: block;
+}
+
+.reveal-text-word {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.is-inview .reveal-text-word {
+  transform: translateY(0%);
+}

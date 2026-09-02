@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08120d" />
+      <stop offset="50%" stop-color="#10261b" />
+      <stop offset="100%" stop-color="#1a3d2c" />
+    </linearGradient>
+    <linearGradient id="goldReserva" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5e29f" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#aa821c" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky4)" />
+  <!-- Gated Reserve Nature -->
+  <ellipse cx="600" cy="520" rx="450" ry="100" fill="#051c14" stroke="#10b981" stroke-width="2" />
+  <!-- Lake -->
+  <ellipse cx="600" cy="520" rx="320" ry="60" fill="#0284c7" opacity="0.8" />
+  <!-- Clubhouse & Gated Community -->
+  <g transform="translate(250, 160)">
+    <!-- Clubhouse Pavilion -->
+    <polygon points="350,140 150,220 550,220" fill="#1e293b" stroke="#d4af37" stroke-width="2" />
+    <rect x="180" y="220" width="340" height="160" rx="6" fill="#0f172a" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+    <rect x="220" y="260" width="80" height="120" fill="#fef08a" opacity="0.9" rx="4" />
+    <rect x="400" y="260" width="80" height="120" fill="#fef08a" opacity="0.9" rx="4" />
+    <line x1="270" y1="220" x2="270" y2="380" stroke="#d4af37" stroke-width="3" />
+    <line x1="430" y1="220" x2="430" y2="380" stroke="#d4af37" stroke-width="3" />
+    <!-- Surrounding Native Trees -->
+    <circle cx="80" cy="280" r="60" fill="#047857" opacity="0.9" />
+    <circle cx="120" cy="260" r="50" fill="#10b981" opacity="0.9" />
+    <circle cx="620" cy="280" r="60" fill="#047857" opacity="0.9" />
+    <circle cx="580" cy="260" r="50" fill="#10b981" opacity="0.9" />
+  </g>
+  <!-- Architectural Badge Overlay -->
+  <rect x="60" y="640" width="1080" height="100" rx="12" fill="rgba(8, 20, 14, 0.94)" stroke="rgba(212,175,55,0.5)" stroke-width="1.5" />
+  <text x="100" y="685" font-family="'Syne', sans-serif, Arial" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="1.5">CONDOMÍNIO RESERVA PONTA PORÃ</text>
+  <text x="100" y="718" font-family="sans-serif, Arial" font-size="15" font-weight="700" fill="#d4af37" letter-spacing="3">LOTES &amp; CASAS EM CONDOMÍNIO FECHADO</text>
+</svg>
